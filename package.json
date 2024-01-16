@@ -1,8 +1,9 @@
 {
-	"name": "ant-plus",
+	"name": "@patrickpilgrim/ts-ant-plus",
 	"version": "0.1.25",
 	"description": "A node module for ANT+",
-	"main": "ant-plus.js",
+	"main": "build/ant-plus.js",
+	"typings": "build/ant-plus.d.ts",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"build": "tsc"
@@ -28,7 +29,7 @@
 		"@types/usb": "^1.5.1"
 	},
 	"files": [
-		"ant-plus.js",
+		"ant-plus.ts",
 		"src/",
 		"build/"
 	],
@@ -40,5 +41,5 @@
 		"type": "git",
 		"url": "https://github.com/Pii2/ts-ant-plus"
 	},
-	"bugs": "https://github.com/Pii2/ts-ant-plusissues"
+	"bugs": "https://github.com/Loghorn/ant-plus/issues"
 }
