@@ -5,7 +5,7 @@
 	"main": "ant-plus.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"prepare": "tsc"
+		"build": "tsc"
 	},
 	"keywords": [
 		"ANT",
@@ -38,7 +38,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/loghorn/ant-plus.git"
+		"url": "https://github.com/Pii2/ts-ant-plus"
 	},
-	"bugs": "https://github.com/Loghorn/ant-plus/issues"
+	"bugs": "https://github.com/Pii2/ts-ant-plusissues"
 }
