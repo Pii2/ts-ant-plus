@@ -1,6 +1,6 @@
 {
 	"name": "@patrickpilgrim/ts-ant-plus",
-	"version": "0.1.27",
+	"version": "0.1.28",
 	"description": "A node module for ANT+",
 	"main": "build/ant-plus.js",
 	"typings": "build/ant-plus.d.ts",
