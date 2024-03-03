@@ -74,6 +74,10 @@ export class SpeedCadenceScanner extends AntPlusScanner {
     }
   }
 
+  protected resetState(deviceId) {
+    this.states[deviceId] = new SpeedCadenceScanState(deviceId);
+  }
+
   protected updateRssiAndThreshold(deviceId, rssi, threshold) {
     this.states[deviceId].Rssi = rssi;
     this.states[deviceId].Threshold = threshold;
