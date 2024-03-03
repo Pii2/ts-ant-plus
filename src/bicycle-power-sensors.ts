@@ -54,6 +54,11 @@ export class BicyclePowerSensor extends AntPlusSensor {
     this.state.DeviceID = deviceId;
     updateState(this, this.state, data);
   }
+
+  resetState() {
+    const deviceId = this.state.DeviceID;
+    this.state = new BicyclePowerSensorState(deviceId);
+  }
 }
 
 export class BicyclePowerScanner extends AntPlusScanner {
@@ -67,10 +72,6 @@ export class BicyclePowerScanner extends AntPlusScanner {
     if (!this.states[deviceId]) {
       this.states[deviceId] = new BicyclePowerScanState(deviceId);
     }
-  }
-
-  protected resetState(deviceId) {
-    this.states[deviceId] = new BicyclePowerScanState(deviceId);
   }
 
   protected updateRssiAndThreshold(deviceId, rssi, threshold) {

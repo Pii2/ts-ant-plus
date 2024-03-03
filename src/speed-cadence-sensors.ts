@@ -53,6 +53,11 @@ export class SpeedCadenceSensor extends AntPlusSensor {
     this.state.DeviceID = deviceId;
     updateState(this, this.state, data);
   }
+
+  resetState() {
+    const deviceId = this.state.DeviceID;
+    this.state = new SpeedCadenceScanState(deviceId);
+  }
 }
 
 export class SpeedCadenceScanner extends AntPlusScanner {
@@ -72,10 +77,6 @@ export class SpeedCadenceScanner extends AntPlusScanner {
     if (!this.states[deviceId]) {
       this.states[deviceId] = new SpeedCadenceScanState(deviceId);
     }
-  }
-
-  protected resetState(deviceId) {
-    this.states[deviceId] = new SpeedCadenceScanState(deviceId);
   }
 
   protected updateRssiAndThreshold(deviceId, rssi, threshold) {
